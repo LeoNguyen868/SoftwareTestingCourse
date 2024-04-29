@@ -12,17 +12,17 @@ public class DemoTest {
 
     @Test
     public void regularTriangle(){
-        assertTrue(Demo.isTriangle(3,4,5));
+        assertTrue(Demo.isTriangle(0.5,1,0.5));
     }
 
     @Test
     public void regularTriangle2(){
-        assertTrue(Demo.isTriangle(4,5,3));
+        assertTrue(Demo.isTriangle(0.5,0.5,1));
     }
 
     @Test
     public void regularTriangle3(){
-        assertTrue(Demo.isTriangle(8,11,12));
+        assertTrue(Demo.isTriangle(1,0.5,0.5));
     }
     
     @Test
@@ -100,10 +100,10 @@ public class DemoTest {
         System.setOut(new PrintStream(out));
         String[] args = {};
         Demo.main(args);
-        String consoleOutput = "Enter side 1: \n";
-        consoleOutput += "Enter side 2: \n";
-        consoleOutput += "Enter side 3: \n";
-        consoleOutput += "This is a triangle.\n";
+        String consoleOutput = "Enter side 1:" + System.getProperty("line.separator");
+        consoleOutput += "Enter side 2:" + System.getProperty("line.separator"); 
+        consoleOutput += "Enter side 3:" + System.getProperty("line.separator"); 
+        consoleOutput += "This is a triangle." + System.getProperty("line.separator"); 
         assertEquals(out.toString(),consoleOutput);
     }
 
